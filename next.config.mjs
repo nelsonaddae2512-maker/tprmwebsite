@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  images: { unoptimized: true },
-  // No basePath/assetPrefix for custom domains
+  images: { unoptimized: true }, // prevents needing an image server
 };
 export default nextConfig;
