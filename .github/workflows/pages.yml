@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages (Custom Domain)
+name: Deploy to GitHub Pages (Custom Domain + Debug)
 
 on:
   push:
@@ -21,20 +21,47 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Show repo state (debug)
+        run: |
+          ls -la
+          echo "---- package.json ----"
+          cat package.json || true
+          echo "---- next.config.mjs ----"
+          cat next.config.mjs || true
+          echo "---- tree (top) ----"
+          ls -la app || true
+          ls -la styles || true
+          ls -la .github/workflows || true
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'   # no cache -> no lockfile warning
+          node-version: '22'
 
+      - name: Print versions (debug)
+        run: |
+          node -v
+          npm -v
+
+      # No lockfile required (avoids the earlier error)
       - name: Install dependencies
-        run: npm install       # works without a lockfile
+        run: npm install
+
+      # If "next" wasn't installed for any reason, install a known-good version
+      - name: Ensure next is available
+        run: npx --yes next@14.2.5 --version
 
       - name: Build (Next.js → static)
-        run: npm run build     # must produce ./out
+        run: npm run build
 
       - name: Add CNAME (if CUSTOM_DOMAIN is set)
         if: ${{ vars.CUSTOM_DOMAIN != '' }}
         run: echo "${{ vars.CUSTOM_DOMAIN }}" > out/CNAME
+
+      - name: Verify export (debug)
+        run: |
+          test -d out || (echo "ERROR: ./out not found" && exit 2)
+          ls -la out | head -50
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -51,5 +78,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-
