@@ -28,26 +28,19 @@ jobs:
           cat package.json || true
           echo "---- next.config.mjs ----"
           cat next.config.mjs || true
-          echo "---- tree (top) ----"
+          echo "---- app ----"
           ls -la app || true
+          echo "---- styles ----"
           ls -la styles || true
-          ls -la .github/workflows || true
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Print versions (debug)
-        run: |
-          node -v
-          npm -v
-
-      # No lockfile required (avoids the earlier error)
-      - name: Install dependencies
+      - name: Install dependencies (no lockfile required)
         run: npm install
 
-      # If "next" wasn't installed for any reason, install a known-good version
       - name: Ensure next is available
         run: npx --yes next@14.2.5 --version
 
@@ -78,3 +71,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
