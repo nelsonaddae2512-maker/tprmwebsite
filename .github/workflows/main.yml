@@ -21,15 +21,15 @@ jobs:
         with:
           node-version: '18'
 
-      # Optional: Add build steps here if using a static site generator
-      # - name: Install dependencies
-      #   run: npm install
-      #
-      # - name: Build site
-      #   run: npm run build
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build static site
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Change to ./dist or ./build if using a build step
+          publish_dir: ./out
