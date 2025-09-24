@@ -25,4 +25,8 @@
   "exclude": [
     "node_modules"
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 44edbd0 (Initial commit with working Next.js setup)
