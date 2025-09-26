@@ -1,31 +1,31 @@
-import HeadSeo from "../components/HeadSeo";
-// ...
-<HeadSeo />
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Truvern",
-      url: "https://www.truvern.com/",
-      logo: "https://www.truvern.com/favicon.ico",
-      sameAs: ["https://www.linkedin.com/company/truvern"],
-    }),
-  }}
-/>
 // pages/index.tsx
-import Head from "next/head";
+import Script from "next/script";
+import HeadSeo from "../components/HeadSeo";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Truvern | Third-Party Risk Management</title>
-        <meta name="description" content="Vendor assessments with auto-scoring, remediation workflows, and audit-ready exports." />
-      </Head>
+      {/* SEO meta */}
+      <HeadSeo />
+
+      {/* JSON-LD (Organization) */}
+      <Script
+        id="org-jsonld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Truvern",
+            url: "https://www.truvern.com/",
+            logo: "https://www.truvern.com/favicon.ico",
+            sameAs: ["https://www.linkedin.com/company/truvern"],
+          }),
+        }}
+      />
 
       <Nav />
 
@@ -39,33 +39,22 @@ export default function Home() {
             Interactive assessments, auto-scoring, and remediation in one vendor-friendly portal.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <a href="/signup" className="rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700">
+            <a
+              href="/signup"
+              className="rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700"
+            >
               Get Started
             </a>
-            <a href="/pricing" className="rounded-xl border border-indigo-600 px-6 py-3 font-semibold text-indigo-600 hover:bg-indigo-50">
+            <a
+              href="/pricing"
+              className="rounded-xl border border-indigo-600 px-6 py-3 font-semibold text-indigo-600 hover:bg-indigo-50"
+            >
               View Pricing
             </a>
           </div>
         </section>
 
         {/* Features */}
-        <section className="mx-auto max-w-6xl px-4 py-12">
-  <p className="text-center text-sm uppercase tracking-wide text-gray-500">Trusted by security teams</p>
-  <div className="mt-6 grid grid-cols-2 gap-6 md:grid-cols-4">
-    <img src="/images/logo1.svg" alt="Logo 1" className="h-8 mx-auto" />
-    <img src="/images/logo2.svg" alt="Logo 2" className="h-8 mx-auto" />
-    <img src="/images/logo3.svg" alt="Logo 3" className="h-8 mx-auto" />
-    <img src="/images/logo4.svg" alt="Logo 4" className="h-8 mx-auto" />
-  </div>
-</section>
-
-<section className="mx-auto max-w-6xl px-4 py-12">
-  <div className="grid gap-8 md:grid-cols-2">
-    <img src="/images/screenshot-assessment.png" alt="Assessment UI" className="rounded-xl border" />
-    <img src="/images/screenshot-heatmap.png" alt="Risk heatmap" className="rounded-xl border" />
-  </div>
-</section>
-
         <section className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 pb-12 md:grid-cols-3">
           {[
             { t: "Interactive Assessments", d: "Guided questions, evidence upload, contextual help." },
@@ -85,7 +74,10 @@ export default function Home() {
         {/* CTA */}
         <section className="bg-indigo-600 py-14 text-center text-white">
           <h2 className="text-2xl font-bold">Start your first assessment in minutes</h2>
-          <a href="/signup" className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-indigo-700 hover:bg-indigo-50">
+          <a
+            href="/signup"
+            className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-indigo-700 hover:bg-indigo-50"
+          >
             Start Free
           </a>
         </section>
