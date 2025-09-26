@@ -1,6 +1,19 @@
 import HeadSeo from "../components/HeadSeo";
 // ...
 <HeadSeo />
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Truvern",
+      url: "https://www.truvern.com/",
+      logo: "https://www.truvern.com/favicon.ico",
+      sameAs: ["https://www.linkedin.com/company/truvern"],
+    }),
+  }}
+/>
 // pages/index.tsx
 import Head from "next/head";
 import Nav from "../components/Nav";
