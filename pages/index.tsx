@@ -1,3 +1,6 @@
+import HeadSeo from "../components/HeadSeo";
+// ...
+<HeadSeo />
 // pages/index.tsx
 import Head from "next/head";
 import Nav from "../components/Nav";
