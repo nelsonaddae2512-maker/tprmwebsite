@@ -1,4 +1,4 @@
-import HeadSeo from "../components/HeadSeo";
+﻿import HeadSeo from "../components/HeadSeo";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 

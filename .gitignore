@@ -1,17 +1,9 @@
-﻿# logs & build artifacts
-build.log
-*.log
-
-# backups
-*.bak
-
-# dependencies / builds
-node_modules
+﻿node_modules
 .next
 out
 dist
-
-# env & OS/editor junk
+*.log
+build.log
 .env
 .DS_Store
 Thumbs.db

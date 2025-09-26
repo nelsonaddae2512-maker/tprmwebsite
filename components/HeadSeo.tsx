@@ -1,4 +1,4 @@
-// components/HeadSeo.tsx
+﻿// components/HeadSeo.tsx
 import Head from "next/head";
 
 type Props = {

@@ -1,4 +1,4 @@
-import Script from "next/script";
+﻿import Script from "next/script";
 import HeadSeo from "../components/HeadSeo";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";

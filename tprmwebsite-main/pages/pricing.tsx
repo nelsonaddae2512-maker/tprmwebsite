@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 
 export default function Pricing() {
   return (
@@ -10,7 +10,7 @@ export default function Pricing() {
 
       <main className="mx-auto max-w-5xl p-8">
         <h1 className="text-4xl font-bold text-indigo-600">Pricing</h1>
-        <p className="mt-4 text-gray-700">Pick a plan that fits your program today—scale later without migration.</p>
+        <p className="mt-4 text-gray-700">Pick a plan that fits your program todayâ€”scale later without migration.</p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           <div className="rounded-xl border p-6">

@@ -1,4 +1,4 @@
-import HeadSeo from "../components/HeadSeo";
+﻿import HeadSeo from "../components/HeadSeo";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
@@ -34,7 +34,7 @@ export default function Terms() {
 
         <h2 className="mt-8 text-xl font-semibold">Disclaimers & Liability</h2>
         <p className="mt-2 text-gray-700">
-          Service provided “as is” without warranties. Liability is limited to the maximum extent permitted by law.
+          Service provided â€œas isâ€ without warranties. Liability is limited to the maximum extent permitted by law.
         </p>
 
         <h2 className="mt-8 text-xl font-semibold">Changes</h2>
