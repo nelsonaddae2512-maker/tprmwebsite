@@ -8,9 +8,18 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p>© {new Date().getFullYear()} Truvern. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/pricing" className="hover:text-indigo-600">Pricing</Link>
-            <Link href="/trust" className="hover:text-indigo-600">Trust</Link>
-            <a href="/security.pdf" className="hover:text-indigo-600">Security PDF</a>
+            <Link href="/pricing" className="hover:text-indigo-600">
+              Pricing
+            </Link>
+            <Link href="/trust" className="hover:text-indigo-600">
+              Trust
+            </Link>
+            <Link href="/privacy" className="hover:text-indigo-600">
+              Privacy
+            </Link>
+            <Link href="/terms" className="hover:text-indigo-600">
+              Terms
+            </Link>
           </div>
         </div>
       </div>
