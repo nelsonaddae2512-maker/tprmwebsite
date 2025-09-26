@@ -1,3 +1,6 @@
+import HeadSeo from "../components/HeadSeo";
+// ...
+<HeadSeo />
 import Head from "next/head";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
