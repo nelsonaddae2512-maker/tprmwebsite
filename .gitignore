@@ -1,6 +1,19 @@
-﻿node_modules
+﻿# logs & build artifacts
+build.log
+*.log
+
+# backups
+*.bak
+
+# dependencies / builds
+node_modules
 .next
 out
 dist
+
+# env & OS/editor junk
 .env
 .DS_Store
+Thumbs.db
+.vscode
+.idea
