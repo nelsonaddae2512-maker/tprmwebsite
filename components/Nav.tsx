@@ -12,12 +12,12 @@ export default function Nav() {
           <Link href="/vendors" className="hover:text-indigo-600">Vendors</Link>
           <Link href="/pricing" className="hover:text-indigo-600">Pricing</Link>
           <Link href="/trust" className="hover:text-indigo-600">Trust</Link>
-          <a
+          <Link
             href="/signup"
             className="rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
