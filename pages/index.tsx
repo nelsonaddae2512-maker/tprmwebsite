@@ -49,6 +49,23 @@ export default function Home() {
         </section>
 
         {/* Features */}
+        <section className="mx-auto max-w-6xl px-4 py-12">
+  <p className="text-center text-sm uppercase tracking-wide text-gray-500">Trusted by security teams</p>
+  <div className="mt-6 grid grid-cols-2 gap-6 md:grid-cols-4">
+    <img src="/images/logo1.svg" alt="Logo 1" className="h-8 mx-auto" />
+    <img src="/images/logo2.svg" alt="Logo 2" className="h-8 mx-auto" />
+    <img src="/images/logo3.svg" alt="Logo 3" className="h-8 mx-auto" />
+    <img src="/images/logo4.svg" alt="Logo 4" className="h-8 mx-auto" />
+  </div>
+</section>
+
+<section className="mx-auto max-w-6xl px-4 py-12">
+  <div className="grid gap-8 md:grid-cols-2">
+    <img src="/images/screenshot-assessment.png" alt="Assessment UI" className="rounded-xl border" />
+    <img src="/images/screenshot-heatmap.png" alt="Risk heatmap" className="rounded-xl border" />
+  </div>
+</section>
+
         <section className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 pb-12 md:grid-cols-3">
           {[
             { t: "Interactive Assessments", d: "Guided questions, evidence upload, contextual help." },
