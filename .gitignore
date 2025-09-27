@@ -1,17 +1,10 @@
-﻿# deps & builds
-node_modules
+﻿node_modules
 .next
 out
 dist
-
-# logs
 *.log
 build.log
-
-# backups
 *.bak
-
-# env & OS/editor
 .env
 .DS_Store
 Thumbs.db
