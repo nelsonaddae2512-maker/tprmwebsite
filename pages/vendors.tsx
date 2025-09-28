@@ -1,12 +1,19 @@
-﻿import Head from "next/head";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
-export default function Vendors(){return(<>
-  <Head><title>For Vendors | Truvern</title></Head>
-  <Nav/>
-  <main className="mx-auto max-w-6xl px-4 py-16">
-    <h1 className="text-4xl font-bold text-indigo-700">For Vendors</h1>
-    <p className="mt-4 text-gray-700">Respond fast with guided questions and evidence uploads.</p>
-  </main>
-  <Footer/>
-</>);}
+// pages/vendors.tsx (top)
+import JsonLd from "../components/JsonLd";
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Truvern TPRM",
+  applicationCategory: "BusinessApplication",
+  description: "Vendor risk assessments with auto-scoring and remediation.",
+  url: "https://www.truvern.com/vendors",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }
+};
+export default function Vendors() {
+  return (
+    <>
+      <JsonLd data={ld} />
+      {/* …your existing page */}
+    </>
+  );
+}
