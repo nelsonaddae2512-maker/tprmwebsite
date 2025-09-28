@@ -1,10 +1,15 @@
+import { useState } from "react";
 import HeadSeo from "../components/HeadSeo";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import ComparePlans from "../components/ComparePlans";
 import PricingFAQ from "../components/PricingFAQ";
+import PricingToggle from "../components/PricingToggle";
+import PlanCards from "../components/PlanCards";
 
 export default function Pricing() {
+  const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
+
   return (
     <>
       <HeadSeo
@@ -14,7 +19,7 @@ export default function Pricing() {
       />
       <Nav />
 
-      {/* Hero */}
+      {/* Hero + Toggle */}
       <section className="bg-gray-50">
         <div className="mx-auto max-w-6xl px-4 py-16 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">
@@ -23,17 +28,18 @@ export default function Pricing() {
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Start free. Upgrade to Pro for unlimited assessments and built-in remediation. Enterprise for SSO & controls at scale.
           </p>
-          <div className="mt-6 flex justify-center gap-3">
-            <a href="/signup" className="rounded-lg bg-indigo-600 px-5 py-3 text-white hover:bg-indigo-700">Get started</a>
-            <a href="/contact" className="rounded-lg border border-gray-300 px-5 py-3 text-gray-800 hover:border-gray-400">Contact sales</a>
+
+          <div className="mt-6 flex justify-center">
+            <PricingToggle value={billing} onChange={setBilling} />
           </div>
         </div>
       </section>
 
-      {/* Compare Plans */}
-      <ComparePlans />
+      {/* Plan Cards react to toggle */}
+      <PlanCards billing={billing} />
 
-      {/* FAQ */}
+      {/* Compare Plans + FAQ */}
+      <ComparePlans />
       <PricingFAQ />
 
       <Footer />
