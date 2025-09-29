@@ -27,30 +27,10 @@ export default function Contact() {
     <main className="mx-auto max-w-xl px-4 py-16">
       <h1 className="text-3xl font-bold text-indigo-700">Contact Sales</h1>
       <form onSubmit={onSubmit} className="mt-6 grid gap-4">
-        <input
-          name="name"
-          placeholder="Full name"
-          className="rounded border p-3"
-          required
-        />
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          className="rounded border p-3"
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Message"
-          rows={5}
-          className="rounded border p-3"
-          required
-        />
-        <button
-          type="submit"
-          className="rounded bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
-        >
+        <input name="name" placeholder="Full name" className="rounded border p-3" required />
+        <input name="email" type="email" placeholder="Email" className="rounded border p-3" required />
+        <textarea name="message" placeholder="Message" rows={5} className="rounded border p-3" required />
+        <button type="submit" className="rounded bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700">
           Send
         </button>
       </form>
@@ -58,4 +38,3 @@ export default function Contact() {
     </main>
   );
 }
- 
