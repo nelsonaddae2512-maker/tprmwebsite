@@ -1,6 +1,20 @@
 // components/featuresData.ts
 
-import { FEATURES } from "@/components/featuresData";
+export type FeatureId =
+  | "interactive"
+  | "scoring"
+  | "remediation"
+  | "exports"
+  | "vendor"
+  | "security";
+
+export type Feature = {
+  id: FeatureId;
+  title: string;
+  desc: string;
+};
+
+export const FEATURES: Feature[] = [
   {
     id: "interactive",
     title: "Interactive Assessments",
