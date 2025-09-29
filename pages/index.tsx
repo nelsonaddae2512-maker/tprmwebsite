@@ -1,12 +1,21 @@
-﻿import Script from "next/script";
-import HeadSeo from "../components/HeadSeo";
+// pages/index.tsx
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import HeadSeo from "../components/HeadSeo";
+import FeatureGrid from "../components/FeatureGrid";
 
 export default function Home() {
   return (
     <>
       <HeadSeo />
+      <Nav />
+      {/* ... your hero ... */}
+      <FeatureGrid />
+      {/* ... other sections ... */}
+      <Footer />
+    </>
+  );
+}
       <Script
         id="org-jsonld"
         type="application/ld+json"
