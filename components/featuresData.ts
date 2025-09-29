@@ -1,6 +1,6 @@
 // components/featuresData.ts
 
-export const FEATURES = [
+import { FEATURES } from "@/components/featuresData";
   {
     id: "interactive",
     title: "Interactive Assessments",
