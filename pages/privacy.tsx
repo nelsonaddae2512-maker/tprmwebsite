@@ -1,5 +1,5 @@
-﻿import Head from "next/head";
-import Nav from "../components/Nav";
+import HeadSeo from "../components/HeadSeo";
+import Nav from "../components/Footer";
 import Footer from "../components/Footer";
 export default function Privacy(){return(<>
   <Head><title>Privacy Policy | Truvern</title></Head>
