@@ -1,6 +1,6 @@
 // pages/index.tsx
 import HeadSeo from "../components/HeadSeo";
-import Nav from "../components/Nav";
+import Nav from "../components/Footer";
 import Footer from "../components/Footer";
 import FeatureGrid from "../components/FeatureGrid";
 
