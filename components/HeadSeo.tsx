@@ -1,37 +1,32 @@
-// components/HeadSeo.tsx
 import Head from "next/head";
 
-export default function Trust() {
-  return (
-    <>
-      <Head><title>Trust • Truvern</title></Head>
-      <main style={{padding: 40}}>…</main>
-    </>
-  );
-}
+type HeadSeoProps = {
+  title: string;
+  description?: string;
+  image?: string;
+  url?: string;
+};
 
 export default function HeadSeo({
-  title = "Truvern — Third-Party Risk, Simplified",
-  description = "Interactive vendor assessments with auto-scoring and remediation in one portal. Start free.",
-  url = "https://www.truvern.com/",
-  image = "/images/og.jpg",
-}: Props) {
+  title,
+  description,
+  image,
+  url,
+}: HeadSeoProps) {
+  const metaDescription = description || "Truvern – Third-Party Risk Management made simple.";
+  const metaImage = image || "/og-image.png";
+  const metaUrl = url || "https://www.truvern.com";
+
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
-
-      <meta property="og:type" content="website" />
+      <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
-
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={metaImage} />
+      <meta property="og:url" content={metaUrl} />
+      <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
     </Head>
   );
 }
