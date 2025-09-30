@@ -1,12 +1,14 @@
 // components/HeadSeo.tsx
 import Head from "next/head";
 
-type Props = {
-  title?: string;
-  description?: string;
-  url?: string;
-  image?: string;
-};
+export default function Trust() {
+  return (
+    <>
+      <Head><title>Trust • Truvern</title></Head>
+      <main style={{padding: 40}}>…</main>
+    </>
+  );
+}
 
 export default function HeadSeo({
   title = "Truvern — Third-Party Risk, Simplified",
