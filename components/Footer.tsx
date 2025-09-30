@@ -1,39 +1,15 @@
-﻿// components/Footer.tsx
-import Head from "next/head";
-import Nav from "../components/Footer"; // ensure the path & case match the file name exactly
-
-export default function Trust() {
-  return (
-    <>
-      <Head><title>Trust • Truvern</title></Head>
-      <Nav />
-      <main style={{padding: 40}}>…</main>
-    </>
-  );
-}
-import Link from "next/link";
-
+// components/Footer.tsx
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t bg-white">
-      <div className="mx-auto max-w-6xl p-6 text-sm text-gray-600">
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p>&copy; {new Date().getFullYear()} Truvern. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link href="/pricing" className="hover:text-indigo-600">
-              Pricing
-            </Link>
-            <Link href="/trust" className="hover:text-indigo-600">
-              Trust
-            </Link>
-            <Link href="/privacy" className="hover:text-indigo-600">
-              Privacy
-            </Link>
-            <Link href="/terms" className="hover:text-indigo-600">
-              Terms
-            </Link>
-          </div>
-        </div>
+    <footer className="border-t bg-white">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 md:flex-row">
+        <p className="text-sm text-gray-500">© 2025 Truvern. All rights reserved.</p>
+        <nav className="flex gap-6 text-sm">
+          <a href="/pricing" className="hover:text-indigo-600">Pricing</a>
+          <a href="/trust" className="hover:text-indigo-600">Trust</a>
+          <a href="/privacy" className="hover:text-indigo-600">Privacy</a>
+          <a href="/terms" className="hover:text-indigo-600">Terms</a>
+        </nav>
       </div>
     </footer>
   );
