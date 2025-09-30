@@ -1,4 +1,15 @@
-// components/Footer.tsx
+cd "C:\Users\MR.NELSON\tprmwebsite"
+
+# 1) See ALL Footer.tsx files (there should only be one under components)
+Get-ChildItem -Recurse -Filter Footer.tsx | Select-Object FullName
+
+# 2) Delete ANY stray copies outside .\components\
+#   (adjust path(s) printed above if different)
+if (Test-Path .\Footer.tsx) { del .\Footer.tsx -Force }
+if (Test-Path .\pages\Footer.tsx) { del .\pages\Footer.tsx -Force }
+
+# 3) Force-overwrite the real component with correct content
+@'
 export default function Footer() {
   return (
     <footer className="border-t bg-white">
@@ -14,4 +25,7 @@ export default function Footer() {
     </footer>
   );
 }
- 
+'@ | Out-File -Encoding utf8 -Force .\components\Footer.tsx
+
+# 4) Sanity check the file now contains NO imports and only ONE default export
+Get-Content .\components\Footer.tsx | Select-Object -First 5
