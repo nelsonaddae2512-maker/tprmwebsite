@@ -1,5 +1,7 @@
 // pages/contact.tsx
-import { useState } from "react";
+import HeadSeo from "../components/HeadSeo";
+import Nav from "../components/Footer";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   const [status, setStatus] = useState<string | null>(null);
