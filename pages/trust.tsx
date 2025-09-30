@@ -1,5 +1,5 @@
 import HeadSeo from "../components/HeadSeo";
-import Nav from "../components/Nav";
+import Nav from "../components/Footer";
 import Footer from "../components/Footer";
 
 export default function Trust() {
