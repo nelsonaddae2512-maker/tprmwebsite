@@ -1,5 +1,16 @@
 ﻿// components/Nav.tsx
-import Link from "next/link";
+import Head from "next/head";
+import Nav from "../components/Nav"; // ensure the path & case match the file name exactly
+
+export default function Trust() {
+  return (
+    <>
+      <Head><title>Trust • Truvern</title></Head>
+      <Nav />
+      <main style={{padding: 40}}>…</main>
+    </>
+  );
+}
 
 export default function Nav() {
   return (
