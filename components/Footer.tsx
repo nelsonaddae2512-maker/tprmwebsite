@@ -1,4 +1,16 @@
 ﻿// components/Footer.tsx
+import Head from "next/head";
+import Nav from "../components/Footer"; // ensure the path & case match the file name exactly
+
+export default function Trust() {
+  return (
+    <>
+      <Head><title>Trust • Truvern</title></Head>
+      <Nav />
+      <main style={{padding: 40}}>…</main>
+    </>
+  );
+}
 import Link from "next/link";
 
 export default function Footer() {
