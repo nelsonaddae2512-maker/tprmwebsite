@@ -1,16 +1,5 @@
-﻿// components/Nav.tsx
-import Head from "next/head";
-import Nav from "../components/Nav"; // ensure the path & case match the file name exactly
-
-export default function Trust() {
-  return (
-    <>
-      <Head><title>Trust • Truvern</title></Head>
-      <Nav />
-      <main style={{padding: 40}}>…</main>
-    </>
-  );
-}
+// components/Nav.tsx
+import Link from "next/link";
 
 export default function Nav() {
   return (
@@ -23,12 +12,12 @@ export default function Nav() {
           <Link href="/vendors" className="hover:text-indigo-600">Vendors</Link>
           <Link href="/pricing" className="hover:text-indigo-600">Pricing</Link>
           <Link href="/trust" className="hover:text-indigo-600">Trust</Link>
-          <Link
+          <a
             href="/signup"
             className="rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </nav>
     </header>
