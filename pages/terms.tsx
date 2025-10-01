@@ -19,8 +19,8 @@ export default function Terms() {
       <main className="mx-auto max-w-4xl px-4 py-16">
         <h1 className="text-3xl font-bold text-indigo-700">Terms of Service</h1>
         <p className="mt-4 text-gray-700">
-          These Terms of Service (“Terms”) govern your use of Truvern’s platform and
-          services. By accessing or using Truvern, you agree to these Terms.
+          These Terms of Service (“Terms”) govern your use of Truvern’s platform
+          and services. By accessing or using Truvern, you agree to these Terms.
         </p>
 
         <section className="mt-8 space-y-6 text-gray-700">
