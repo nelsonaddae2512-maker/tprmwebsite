@@ -43,26 +43,12 @@ export default function Vendors() {
         <section className="border-t bg-white">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-14 md:grid-cols-3">
             {[
-              {
-                title: "Guided completion",
-                desc: "Inline tips and examples cut down on back-and-forth.",
-              },
-              {
-                title: "Evidence uploads",
-                desc: "Attach policies, SOC 2, and diagrams once, reference anywhere.",
-              },
-              {
-                title: "Clear status",
-                desc: "See exactly what’s required, what’s reviewed, and what’s left.",
-              },
+              { title: "Guided completion", desc: "Inline tips and examples cut down on back-and-forth." },
+              { title: "Evidence uploads", desc: "Attach policies, SOC 2, and diagrams once, reference anywhere." },
+              { title: "Clear status", desc: "See exactly what’s required, what’s reviewed, and what’s left." },
             ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border p-6 shadow-sm"
-              >
-                <h3 className="text-lg font-semibold text-indigo-700">
-                  {item.title}
-                </h3>
+              <div key={item.title} className="rounded-2xl border p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-indigo-700">{item.title}</h3>
                 <p className="mt-2 text-gray-700">{item.desc}</p>
               </div>
             ))}
@@ -72,28 +58,14 @@ export default function Vendors() {
         {/* How it works */}
         <section className="bg-indigo-50">
           <div className="mx-auto max-w-6xl px-4 py-16">
-            <h2 className="text-2xl font-bold text-indigo-700">
-              How it works
-            </h2>
+            <h2 className="text-2xl font-bold text-indigo-700">How it works</h2>
             <ol className="mt-6 grid gap-6 md:grid-cols-3">
               {[
-                {
-                  step: "1",
-                  text: "Accept your customer’s invite and open the questionnaire.",
-                },
-                {
-                  step: "2",
-                  text: "Answer with guidance and upload evidence where needed.",
-                },
-                {
-                  step: "3",
-                  text: "Submit. Track reviews and respond to any follow-ups.",
-                },
+                { step: "1", text: "Accept your customer’s invite and open the questionnaire." },
+                { step: "2", text: "Answer with guidance and upload evidence where needed." },
+                { step: "3", text: "Submit. Track reviews and respond to any follow-ups." },
               ].map((s) => (
-                <li
-                  key={s.step}
-                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200"
-                >
+                <li key={s.step} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600 text-white">
                     {s.step}
                   </div>
@@ -106,9 +78,7 @@ export default function Vendors() {
 
         {/* CTA */}
         <section className="mx-auto max-w-6xl px-4 py-16 text-center">
-          <h3 className="text-2xl font-bold text-indigo-700">
-            Save hours on every questionnaire.
-          </h3>
+          <h3 className="text-2xl font-bold text-indigo-700">Save hours on every questionnaire.</h3>
           <p className="mx-auto mt-2 max-w-2xl text-gray-700">
             Vendors use Truvern to finish reviews faster and keep deals moving.
           </p>
