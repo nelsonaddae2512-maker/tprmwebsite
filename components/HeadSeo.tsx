@@ -2,7 +2,7 @@ HEAD
 import Head from "next/head";
 
 ﻿import Head from "next/head";
->>>>>>> 52d8314 (fix(HeadSeo): single default export; remove duplicates)
+52d8314 (fix(HeadSeo): single default export; remove duplicates)
 
 type HeadSeoProps = {
   title: string;
