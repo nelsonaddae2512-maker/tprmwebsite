@@ -42,7 +42,10 @@ export default function Privacy() {
           </div>
           <div>
             <h2 className="text-xl font-semibold">5. Contact</h2>
-            <p>Questions? Email the Trust team via the <a className="text-indigo-700 underline" href="/contact">contact page</a>.</p>
+            <p>
+              Questions? Email the Trust team via the{" "}
+              <a className="text-indigo-700 underline" href="/contact">contact page</a>.
+            </p>
           </div>
         </section>
       </main>
