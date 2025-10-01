@@ -1,59 +1,123 @@
+// pages/vendors.tsx
 import HeadSeo from "../components/HeadSeo";
-import Nav from "../components/Footer";
+import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 export default function Vendors() {
   return (
     <>
       <HeadSeo
-        title="For Vendors • Truvern"
-        description="A friendly, guided experience for vendors completing security questionnaires. Evidence uploads, auto-save, and remediation tracking."
+        title="For Vendors — Faster Security Reviews"
+        description="Answer once, reuse everywhere. Truvern helps vendors finish security questionnaires faster with guidance, evidence uploads, and friendly reminders."
         url="https://www.truvern.com/vendors"
       />
       <Nav />
 
       <main className="bg-white">
         {/* Hero */}
-        <section className="mx-auto max-w-6xl px-4 py-16 text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">Vendor Experience</h1>
-          <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-700">
-            Complete assessments fast with a guided workflow, evidence uploads, and clear status.
+        <section className="mx-auto max-w-6xl px-4 py-20 text-center">
+          <h1 className="text-4xl font-extrabold tracking-tight text-indigo-700 md:text-5xl">
+            Faster, friendlier security questionnaires.
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-700">
+            Answer once, reuse everywhere. Guided help, evidence upload,
+            and clear status so you’re never guessing what’s next.
           </p>
+          <div className="mt-8 flex justify-center gap-4">
+            <a
+              href="/signup"
+              className="rounded-lg bg-indigo-600 px-6 py-3 font-medium text-white hover:bg-indigo-700"
+            >
+              Get Started
+            </a>
+            <a
+              href="/contact"
+              className="rounded-lg border border-indigo-600 px-6 py-3 font-medium text-indigo-700 hover:bg-indigo-50"
+            >
+              Talk to us
+            </a>
+          </div>
         </section>
 
         {/* Benefits */}
-        <section className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-3">
-          <div className="rounded-2xl border bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-gray-900">Guided Questionnaire</h2>
-            <p className="mt-2 text-gray-700">Contextual help, validation, and reusable answers for common controls.</p>
-          </div>
-          <div className="rounded-2xl border bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-gray-900">Evidence Uploads</h2>
-            <p className="mt-2 text-gray-700">Attach policies and reports; reuse across assessments with versioning.</p>
-          </div>
-          <div className="rounded-2xl border bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-semibold text-gray-900">Remediation Tasks</h2>
-            <p className="mt-2 text-gray-700">Track follow-ups with owners, SLAs, and due dates in one place.</p>
+        <section className="border-t bg-white">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-14 md:grid-cols-3">
+            {[
+              {
+                title: "Guided completion",
+                desc: "Inline tips and examples cut down on back-and-forth.",
+              },
+              {
+                title: "Evidence uploads",
+                desc: "Attach policies, SOC 2, and diagrams once, reference anywhere.",
+              },
+              {
+                title: "Clear status",
+                desc: "See exactly what’s required, what’s reviewed, and what’s left.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border p-6 shadow-sm"
+              >
+                <h3 className="text-lg font-semibold text-indigo-700">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-gray-700">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         {/* How it works */}
-        <section className="mx-auto max-w-6xl px-4 py-12">
-          <h2 className="text-2xl font-bold text-indigo-700">How it works</h2>
-          <ol className="mt-4 list-decimal pl-6 text-gray-700">
-            <li>Receive an invite link from your customer</li>
-            <li>Complete the guided questionnaire and upload evidence</li>
-            <li>Address any remediation items and submit</li>
-          </ol>
+        <section className="bg-indigo-50">
+          <div className="mx-auto max-w-6xl px-4 py-16">
+            <h2 className="text-2xl font-bold text-indigo-700">
+              How it works
+            </h2>
+            <ol className="mt-6 grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  step: "1",
+                  text: "Accept your customer’s invite and open the questionnaire.",
+                },
+                {
+                  step: "2",
+                  text: "Answer with guidance and upload evidence where needed.",
+                },
+                {
+                  step: "3",
+                  text: "Submit. Track reviews and respond to any follow-ups.",
+                },
+              ].map((s) => (
+                <li
+                  key={s.step}
+                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600 text-white">
+                    {s.step}
+                  </div>
+                  <p className="mt-3 text-gray-800">{s.text}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </section>
 
         {/* CTA */}
-        <section className="bg-indigo-600">
-          <div className="mx-auto max-w-6xl px-4 py-12 text-center text-white">
-            <h2 className="text-2xl font-bold">Ready to breeze through questionnaires?</h2>
-            <p className="mt-2 opacity-90">Spin up your portal in minutes.</p>
-            <a href="/signup" className="mt-6 inline-block rounded-lg bg-white px-5 py-3 font-medium text-indigo-700 hover:bg-gray-100">
-              Get Started
+        <section className="mx-auto max-w-6xl px-4 py-16 text-center">
+          <h3 className="text-2xl font-bold text-indigo-700">
+            Save hours on every questionnaire.
+          </h3>
+          <p className="mx-auto mt-2 max-w-2xl text-gray-700">
+            Vendors use Truvern to finish reviews faster and keep deals moving.
+          </p>
+          <div className="mt-6">
+            <a
+              href="/signup"
+              className="rounded-lg bg-indigo-600 px-6 py-3 font-medium text-white hover:bg-indigo-700"
+            >
+              Create your free account
             </a>
           </div>
         </section>
