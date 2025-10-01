@@ -29,35 +29,15 @@ export default function Trust() {
         <section className="border-t">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-14 md:grid-cols-3">
             {[
-              {
-                title: "Encryption",
-                desc: "TLS in transit, AES-256 at rest. Keys rotated and access-scoped.",
-              },
-              {
-                title: "Access control",
-                desc: "SSO & MFA support. Role-based access with least-privilege defaults.",
-              },
-              {
-                title: "Audit logging",
-                desc: "Comprehensive event logs retained with tamper-resistant storage.",
-              },
-              {
-                title: "Secure SDLC",
-                desc: "Code reviews, dependency scanning, and change management gates.",
-              },
-              {
-                title: "Backups & DR",
-                desc: "Automated backups, integrity checks, and disaster-recovery testing.",
-              },
-              {
-                title: "Compliance-ready",
-                desc: "Designed to support SOC 2 & ISO 27001 control expectations.",
-              },
+              { title: "Encryption", desc: "TLS in transit, AES-256 at rest. Keys rotated and access-scoped." },
+              { title: "Access control", desc: "SSO & MFA support. Role-based access with least-privilege defaults." },
+              { title: "Audit logging", desc: "Comprehensive event logs retained with tamper-resistant storage." },
+              { title: "Secure SDLC", desc: "Code reviews, dependency scanning, and change management gates." },
+              { title: "Backups & DR", desc: "Automated backups, integrity checks, and disaster-recovery testing." },
+              { title: "Compliance-ready", desc: "Designed to support SOC 2 & ISO 27001 control expectations." },
             ].map((f) => (
               <div key={f.title} className="rounded-2xl border p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-indigo-700">
-                  {f.title}
-                </h3>
+                <h3 className="text-lg font-semibold text-indigo-700">{f.title}</h3>
                 <p className="mt-2 text-gray-700">{f.desc}</p>
               </div>
             ))}
