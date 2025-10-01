@@ -1,54 +1,28 @@
-HEAD
+del .\components\HeadSeo.tsx -Force 2>$null
+
+$code = @'
 import Head from "next/head";
 
-﻿import Head from "next/head";
-52d8314 (fix(HeadSeo): single default export; remove duplicates)
-
-type HeadSeoProps = {
-  title: string;
+interface HeadSeoProps {
+  title?: string;
   description?: string;
-  image?: string;
-  url?: string;
-};
+}
 
-export default function HeadSeo({
-  title,
-  description,
-  image,
-  url,
-}: HeadSeoProps) {
-HEAD
-  const metaDescription = description || "Truvern – Third-Party Risk Management made simple.";
-  const metaImage = image || "/og-image.png";
-  const metaUrl = url || "https://www.truvern.com";
-
-  const metaDescription = description ?? "Truvern – Third-Party Risk Management made simple.";
-  const metaImage = image ?? "/images/og.jpg";
-  const metaUrl = url ?? "https://www.truvern.com";
- 52d8314 (fix(HeadSeo): single default export; remove duplicates)
+export default function HeadSeo({ title, description }: HeadSeoProps) {
+  const siteTitle = title ? `${title} • Truvern` : "Truvern — Third-Party Risk, Simplified";
+  const siteDescription = description || "Interactive vendor risk assessments, auto-scoring, and remediation in one vendor-friendly portal.";
 
   return (
     <Head>
-      <title>{title}</title>
-      <meta name="description" content={metaDescription} />
- HEAD
-      
-      <meta property="og:type" content="website" />
- 52d8314 (fix(HeadSeo): single default export; remove duplicates)
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content={metaImage} />
-      <meta property="og:url" content={metaUrl} />
- HEAD
-      <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary_large_image" />
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={metaImage} />
-      <link rel="canonical" href={metaUrl} />
- 52d8314 (fix(HeadSeo): single default export; remove duplicates)
+      <title>{siteTitle}</title>
+      <meta name="description" content={siteDescription} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon.ico" />
+      <meta property="og:title" content={siteTitle} />
+      <meta property="og:description" content={siteDescription} />
+      <meta property="og:image" content="/images/og.jpg" />
     </Head>
   );
 }
+'@
+Set-Content -Path .\components\HeadSeo.tsx -Value $code -Encoding utf8
