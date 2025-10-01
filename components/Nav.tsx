@@ -9,15 +9,9 @@ export default function Nav() {
           Truvern
         </Link>
         <div className="flex items-center gap-6 text-sm font-medium">
-          <Link href="/vendors" className="hover:text-indigo-600">
-            Vendors
-          </Link>
-          <Link href="/pricing" className="hover:text-indigo-600">
-            Pricing
-          </Link>
-          <Link href="/trust" className="hover:text-indigo-600">
-            Trust
-          </Link>
+          <Link href="/vendors" className="hover:text-indigo-600">Vendors</Link>
+          <Link href="/pricing" className="hover:text-indigo-600">Pricing</Link>
+          <Link href="/trust" className="hover:text-indigo-600">Trust</Link>
           <a
             href="/signup"
             className="rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
