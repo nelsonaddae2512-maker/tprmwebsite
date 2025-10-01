@@ -26,44 +26,25 @@ export default function Terms() {
         <section className="mt-8 space-y-6 text-gray-700">
           <div>
             <h2 className="text-xl font-semibold">1. Acceptance of Terms</h2>
-            <p>
-              By signing up for Truvern, you accept and agree to abide by these Terms
-              and our Privacy Policy.
-            </p>
+            <p>By signing up for Truvern, you accept these Terms and our Privacy Policy.</p>
           </div>
-
           <div>
             <h2 className="text-xl font-semibold">2. Use of Service</h2>
-            <p>
-              You may use Truvern only for lawful purposes and in accordance with
-              these Terms.
-            </p>
+            <p>You may use Truvern only for lawful purposes and in accordance with these Terms.</p>
           </div>
-
           <div>
             <h2 className="text-xl font-semibold">3. Accounts</h2>
-            <p>
-              You are responsible for maintaining the confidentiality of your account
-              credentials and activities.
-            </p>
+            <p>You are responsible for maintaining the confidentiality of your credentials.</p>
           </div>
-
           <div>
             <h2 className="text-xl font-semibold">4. Limitation of Liability</h2>
-            <p>
-              Truvern is not liable for indirect or consequential damages arising from
-              use of the service.
-            </p>
+            <p>Truvern is not liable for indirect or consequential damages from use of the service.</p>
           </div>
-
           <div>
             <h2 className="text-xl font-semibold">5. Contact</h2>
             <p>
-              For questions, please contact us via the{" "}
-              <a className="text-indigo-700 underline" href="/contact">
-                contact page
-              </a>
-              .
+              Questions? Reach us via the{" "}
+              <a className="text-indigo-700 underline" href="/contact">contact page</a>.
             </p>
           </div>
         </section>
