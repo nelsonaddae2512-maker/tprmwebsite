@@ -17,8 +17,11 @@ export default function Contact() {
         email: (form.elements.namedItem("email") as HTMLInputElement).value,
         message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
       };
-      // Replace with your real endpoint or email service
-      await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
       setStatus("sent");
       form.reset();
     } catch {
@@ -34,13 +37,11 @@ export default function Contact() {
         url="https://www.truvern.com/contact"
       />
       <Nav />
-
       <main className="mx-auto max-w-xl px-4 py-16">
         <h1 className="text-3xl font-bold text-indigo-700">Contact Sales</h1>
         <p className="mt-2 text-gray-700">
           Tell us a bit about your program and we’ll get back to you shortly.
         </p>
-
         <form onSubmit={onSubmit} className="mt-6 grid gap-4">
           <input name="name" placeholder="Full name" className="rounded border p-3" required />
           <input name="email" type="email" placeholder="Work email" className="rounded border p-3" required />
@@ -56,7 +57,6 @@ export default function Contact() {
           {status === "error" && <p className="text-red-700">Something went wrong. Please try again.</p>}
         </form>
       </main>
-
       <Footer />
     </>
   );

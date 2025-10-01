@@ -5,11 +5,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Safe global tags only (icons, preconnects, fonts, meta) */}
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#4f46e5" />
       </Head>
-      <body className="bg-white text-gray-800">
+      <body className="bg-white text-gray-900 antialiased">
         <Main />
         <NextScript />
       </body>
