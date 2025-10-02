@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="40" viewBox="0 0 300 60" fill="none">
+  <path d="M30 5L50 15V30C50 45 40 55 30 60C20 55 10 45 10 30V15L30 5Z" fill="#4F46E5"/>
+  <path d="M22 32L28 38L40 24" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="70" y="38" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#1E1E1E">Truvern</text>
+</svg>

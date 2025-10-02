@@ -1,0 +1,11 @@
+{
+  "name": "Truvern",
+  "short_name": "Truvern",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "48x48", "type": "image/svg+xml" }
+  ],
+  "theme_color": "#4F46E5",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
