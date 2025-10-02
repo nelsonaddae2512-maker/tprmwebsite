@@ -1,10 +1,12 @@
-// scripts/generate-icons.mjs
-import fs from "node:fs";
-import path from "node:path";
+import fs from "fs";
 import sharp from "sharp";
+import path from "path";
 
-const pub = path.resolve("public");
-fs.mkdirSync(pub, { recursive: true });
+const outDir = path.join(process.cwd(), "public");
+
+// ✅ Use recursive: true to avoid EEXIST errors
+fs.mkdirSync(outDir, { recursive: true });
+
 
 // --- SVG sources ---
 const faviconSvg = `
