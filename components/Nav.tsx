@@ -169,7 +169,7 @@ export default function Nav() {
             href="/signup"
             className="rounded-md bg-indigo-600 px-4 py-2 text-white font-semibold hover:bg-indigo-700 transition"
           >
-            Get Started
+            Get Started ▶
           </Link>
         </div>
 
